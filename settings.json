@@ -1,0 +1,41 @@
+{
+  "API_KEYS": {
+    "openai": "YOUR_API_KEY_HERE"
+  },
+  "BASE_MODEL": "gpt-4o-mini",
+  "COMPLEX_MODEL": "gpt-4o-mini",
+  "EMBED_MODEL": "text-embedding-3-small",
+  "DEFAULT_PROVIDER": "openai",
+
+  "WEAVIATE_PROVIDER": "cloud",
+  "WEAVIATE_URL": "https://yf9yqnuqqxid8j1qflpcvg.c0.us-west3.gcp.weaviate.cloud",
+  "WEAVIATE_API_KEY": "bVZnLyt5d280VEpzMlJxQV94L0FTMjFlS1g2OUhhc1ZENm5pZE1ab3haSEVFNS84SFRUMXpWQWNvckM4PV92MjAw",
+  "WEAVIATE_COLLECTION": "LegalDocument",
+  "TEXT_FIELD": "full_text",
+
+  "SETTINGS": {
+    "debug_mode": true,
+    "log_level": "debug",
+    "first_start": true,
+    "vectorize_with_llm": false,
+    "vector_cache_enabled": true,
+    "create_metadata_if_missing": true
+  },
+
+  "FIELDS": {
+    "lawNumber": "Numéro du texte juridique",
+    "documentType": "Type de document",
+    "date_string": "Date de publication",
+    "year": "Année de publication",
+    "subject": "Domaine juridique",
+    "signatures": "Signataires",
+    "summary": "Résumé",
+    "keywords": "Mots-clés",
+    "text": "Texte intégral",
+    "full_text": "Texte enrichi pour embedding",
+    "pageNumber": "Numéro de page",
+    "references": "Références juridiques"
+  },
+
+  "CACHE_DIR": ".elysia_cache"
+}

@@ -1,0 +1,43 @@
+llm:
+  provider: openai
+  model: gpt-4o-mini          # ou gpt-4o selon ton plan
+  api_key: YOUR_API_KEY_HERE
+  api_base: https://api.openai.com/v1
+  vectorize: true
+
+embedding:
+  provider: openai
+  api_key: YOUR_API_KEY_HERE
+  model: text-embedding-3-small
+
+weaviate:
+  provider: cloud
+  url: https://yf9yqnuqqxid8j1qflpcvg.c0.us-west3.gcp.weaviate.cloud
+  api_key: bVZnLyt5d280VEpzMlJxQV94L0FTMjFlS1FlS1g2OUhhc1ZENm5pZE1ab3haSEVFNS84SFRUMXpWQWNvckM4PV92MjAw
+  collection: LegalDocument
+  text_field: full_text
+  auto_vectorize: true
+  use_existing_vectors: true
+
+settings:
+  debug_mode: true
+  log_level: debug
+  cache_dir: .elysia_cache
+  first_start: true
+  create_metadata_if_missing: true
+  vectorize_with_llm: false
+  vector_cache_enabled: true
+
+fields:
+  lawNumber: "Numéro du texte juridique"
+  documentType: "Type de document"
+  date_string: "Date de publication"
+  year: "Année de publication"
+  subject: "Domaine juridique"
+  signatures: "Signataires"
+  summary: "Résumé"
+  keywords: "Mots-clés"
+  text: "Texte intégral"
+  full_text: "Texte enrichi pour embedding"
+  pageNumber: "Numéro de page"
+  references: "Références juridiques"
